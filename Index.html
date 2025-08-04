@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chevrolet O'zbekiston - Rasmiy Diler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./85b6b1f9fb36e2099515e4bce74b64bd-Photoroom.png" alt="Chevrolet Logo" class="header-logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Bosh Sahifa</a></li>
+                    <li><a href="#models">Modellar</a></li>
+                    <li><a href="#services">Xizmatlar</a></li>
+                    <li><a href="#contact">Aloqa</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="auth-btn login-btn">Kirish</button>
+                <button class="auth-btn register-btn">Ro'yxatdan o'tish</button>
+                <button class="cta-button test-drive-btn">Test Haydash</button>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Kirish modali -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Kirish</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="Emailingiz" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Parol</label>
+                    <input type="password" id="loginPassword" placeholder="Parolingiz" required>
+                </div>
+                <button type="submit" class="btn btn-login">Kirish</button>
+                <p class="auth-switch">Hisobingiz yo'qmi? <a href="#" class="show-register">Ro'yxatdan o'tish</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Ro'yxatdan o'tish modali -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Ro'yxatdan o'tish</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Ism</label>
+                    <input type="text" id="registerName" placeholder="Ismingiz" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" placeholder="Emailingiz" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPhone">Telefon</label>
+                    <input type="tel" id="registerPhone" placeholder="+998 __ ___ __ __" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Parol</label>
+                    <input type="password" id="registerPassword" placeholder="Parol" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirm">Parolni tasdiqlang</label>
+                    <input type="password" id="registerConfirm" placeholder="Parolni qayta kiriting" required>
+                </div>
+                <button type="submit" class="btn btn-register">Ro'yxatdan o'tish</button>
+                <p class="auth-switch">Hisobingiz bormi? <a href="#" class="show-login">Kirish</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Test Haydash modali -->
+    <div id="testDriveModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-image">
+                <img src="https://frankfurt.apollo.olxcdn.com/v1/files/vrcpkmsux1ku3-UZ/image;s=1024x910" alt="Chevrolet Cobalt">
+            </div>
+            <h2>Test Haydash uchun ariza</h2>
+            <form id="testDriveForm">
+                <div class="form-group">
+                    <label for="testName">Ismingiz</label>
+                    <input type="text" id="testName" placeholder="Ismingiz" required>
+                </div>
+                <div class="form-group">
+                    <label for="testPhone">Telefon raqamingiz</label>
+                    <input type="tel" id="testPhone" placeholder="+998 __ ___ __ __" required>
+                </div>
+                <div class="form-group">
+                    <label for="testModel">Modelni tanlang</label>
+                    <select id="testModel" required>
+                        <option value="" disabled selected>Modelni tanlang</option>
+                        <option value="cobalt">Chevrolet Cobalt</option>
+                        <option value="gentra">Chevrolet Gentra</option>
+                        <option value="onix">Chevrolet Onix</option>
+                        <option value="captiva">Chevrolet Captiva</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="testDate">Sana</label>
+                    <input type="date" id="testDate" required>
+                </div>
+                <button type="submit" class="btn btn-submit">Ariza yuborish</button>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <h1>Chevrolet - <span>Haqiqiy qulaylik</span></h1>
+                <p>Ishonchlilik va qulaylikning mukammal uyg'unligi</p>
+                <button class="cta-button scroll-to-models">Modellarni Ko'rish</button>
+            </div>
+        </section>
+
+        <section id="models" class="models">
+            <div class="container">
+                <h2>Chevrolet Modellari</h2>
+                <div class="models-grid" id="productGrid">
+                    <!-- Modellar JavaScript orqali yuklanadi -->
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Xizmatlarimiz</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-car"></i>
+                        <h3>Kredit</h3>
+                        <p>24 oygacha foizsiz kredit</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Kafolat</h3>
+                        <p>5 yilgacha kafolat xizmati</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>Texnik Xizmat</h3>
+                        <p>Malakali mutaxassislar</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Aloqa</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Chevrolet O'zbekiston</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Toshkent shahri, Yunusobod tumani</p>
+                        <p><i class="fas fa-phone"></i> +998 71 123 45 67</p>
+                        <p><i class="fas fa-envelope"></i> info@chevrolet.uz</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Ismingiz</label>
+                            <input type="text" id="contactName" placeholder="Ismingiz" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Telefon raqamingiz</label>
+                            <input type="tel" id="contactPhone" placeholder="+998 __ ___ __ __" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Xabaringiz</label>
+                            <textarea id="contactMessage" placeholder="Xabaringiz" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Yuborish</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="./85b6b1f9fb36e2099515e4bce74b64bd-Photoroom.png" alt="Chevrolet Logo" class="footer-logo">
+                    <p>Chevrolet - Find New Roads</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Tezkor Havolalar</h3>
+                    <ul>
+                        <li><a href="#home">Bosh Sahifa</a></li>
+                        <li><a href="#models">Modellar</a></li>
+                        <li><a href="#services">Xizmatlar</a></li>
+                        <li><a href="#contact">Aloqa</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Aloqa</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Toshkent shahri, Yunusobod tumani</p>
+                    <p><i class="fas fa-phone"></i> +998 71 123 45 67</p>
+                    <p><i class="fas fa-envelope"></i> info@chevrolet.uz</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Chevrolet O'zbekiston. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Buyurtma modali -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="orderProductInfo"></div>
+            <div class="order-form-container">
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label for="orderName">Ismingiz</label>
+                        <input type="text" id="orderName" name="name" placeholder="Ismingizni kiriting" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="orderPhone">Telefon raqamingiz</label>
+                        <input type="tel" id="orderPhone" name="phone" placeholder="+998 __ ___ __ __" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>To'lov usuli</label>
+                        <div class="payment-methods">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="cash" checked>
+                                <span class="checkmark"></span>
+                                Naqd pul
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="card">
+                                <span class="checkmark"></span>
+                                Karta orqali
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="credit">
+                                <span class="checkmark"></span>
+                                Kredit
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="orderNotes">Qo'shimcha izohlar</label>
+                        <textarea id="orderNotes" name="notes" placeholder="Qo'shimcha izohlar yozishingiz mumkin"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-submit">Buyurtma berish</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
